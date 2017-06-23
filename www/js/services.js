@@ -4,8 +4,13 @@ angular.module('app.services', [])
 
 }])
 
-.service('BlankService', [function($http){
+.service('BlankService', ["$http", function($http){
+
+    let devUrl = 'http://localhost:3000'
+    let herokuUrl = 'https://peoplecode.herokuapp.com'
+
     this.getdata = function(){
-        return $http.get('http://localhost:3000/api/getQuestionData')
+        return $http.get(herokuUrl + '/api/getQuestionData')
     }
+    console.log('asdof')
 }]);
