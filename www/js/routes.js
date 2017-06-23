@@ -15,18 +15,6 @@ angular.module('app.routes', [])
     controller: 'homeCtrl'
   })
 
-  .state('cart', {
-    url: '/page2',
-    templateUrl: 'templates/cart.html',
-    controller: 'cartCtrl'
-  })
-
-  .state('cloud', {
-    url: '/page3',
-    templateUrl: 'templates/cloud.html',
-    controller: 'cloudCtrl'
-  })
-
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
@@ -43,6 +31,12 @@ angular.module('app.routes', [])
     url: '/page5',
     templateUrl: 'templates/preTest.html',
     controller: 'preTestCtrl'
+  })
+
+  .state('about', {
+    url: '/page6',
+    templateUrl: 'templates/about.html',
+    controller: 'aboutCtrl'
   })
 
 $urlRouterProvider.otherwise('/page1')

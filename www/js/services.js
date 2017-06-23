@@ -4,6 +4,8 @@ angular.module('app.services', [])
 
 }])
 
-.service('BlankService', [function(){
-
+.service('BlankService', [function($http){
+    this.getdata = function(){
+        return $http.get('http://localhost:3000/api/getQuestionData')
+    }
 }]);
