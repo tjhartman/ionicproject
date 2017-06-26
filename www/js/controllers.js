@@ -26,7 +26,7 @@ function ($scope, $stateParams, BlankService) {
             var questions = response.data
             var group = []
             for (var i = 0; i < questions.length; i++){
-                if (questions[i].question_id == 13) {
+                if (questions[i].question_id == 21) {
                     group.push(questions[i])
                 }
                 
