@@ -26,17 +26,18 @@ function ($scope, $stateParams, BlankService) {
             var questions = response.data
             var group = []
             for (var i = 0; i < questions.length; i++){
-                if (questions[i].question_id == 1) {
+                if (questions[i].question_id == 13) {
                     group.push(questions[i])
                 }
                 
             }
                 console.log(group)
                 $scope.questions = group
+                $scope.quest = group[0].question
+                console.log($scope.quest)
         })
     }
     $scope.getdata()
-    $scope.test = 'Hey'
 
 }])
    
