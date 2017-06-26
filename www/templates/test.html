@@ -1,11 +1,10 @@
 <ion-view title="Test" id="page4">
   <ion-content padding="true" class="has-header">
-    <h1 id="test-heading4" style="color:#000000;text-align:center;">I am...</h1>
+    <div ng-repeat='question in questions'>
+    <h1 id="test-heading4" style="color:#000000;text-align:center;">{{question.question}}</h1>
     <ion-list id="test-list1">
-      <ion-item id="test-list-item4">Nurturing</ion-item>
-      <ion-item id="test-list-item5">Objective</ion-item>
-      <ion-item id="test-list-item6">Proactive</ion-item>
-      <ion-item id="test-list-item7">Insightful</ion-item>
+      <ion-item id="test-list-item4">{{question.options}}</ion-item>
     </ion-list>
+    </div>
   </ion-content>
 </ion-view>

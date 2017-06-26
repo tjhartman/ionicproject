@@ -23,11 +23,20 @@ function ($scope, $stateParams, BlankService) {
     console.log('asdf')
     $scope.getdata = function(){
         BlankService.getdata().then(function (response){
-            $scope.questions = response
-            console.log($scope.questions)
+            var questions = response.data
+            var group = []
+            for (var i = 0; i < questions.length; i++){
+                if (questions[i].question_id == 1) {
+                    group.push(questions[i])
+                }
+                
+            }
+                console.log(group)
+                $scope.questions = group
         })
     }
     $scope.getdata()
+    $scope.test = 'Hey'
 
 }])
    
