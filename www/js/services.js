@@ -12,5 +12,4 @@ angular.module('app.services', [])
     this.getdata = function(){
         return $http.get(devUrl + '/api/getQuestionData')
     }
-    console.log('asdof')
 }]);
