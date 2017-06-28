@@ -39,6 +39,18 @@ angular.module('app.routes', [])
     controller: 'aboutCtrl'
   })
 
+  .state('results', {
+    url: '/page7',
+    templateUrl: 'templates/results.html',
+    controller: 'resultsCtrl'
+  })
+
+  .state('login', {
+    url: '/page8',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1')
 
 
