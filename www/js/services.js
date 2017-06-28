@@ -10,7 +10,7 @@ angular.module('app.services', [])
     let herokuUrl = 'https://peoplecode.herokuapp.com'
 
     this.getdata = function(){
-        return $http.get(herokuUrl + '/api/getQuestionData')
+        return $http.get(devUrl + '/api/getQuestionData')
     }
     console.log('asdof')
 }]);
