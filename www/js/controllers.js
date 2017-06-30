@@ -5,16 +5,6 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, BlankService) {
 
-       function getUser() {
-    BlankService.getUser().then(function(user) {
-        $scope.userResults = user;
-        // $scope.userFavorites = user.favorites;
-        console.log(user)
-    })
-  }
-    getUser()
-
-
 
 }])
    
@@ -34,7 +24,6 @@ function ($scope, $stateParams, BlankService) {
 $scope.userResults;
 $scope.questionId = 1;
 
-    $scope.getdata = function(){
         BlankService.getdata().then(function (response){
             var questions = response.data
             var group = []
@@ -49,8 +38,14 @@ $scope.questionId = 1;
                 $scope.quest = group[0].question
                 console.log($scope.quest)
         })
+        
+    
+
+
+    $scope.forward = function(index){
+        console.log($scope.questionId)
+
     }
-    $scope.getdata()
 
     function getUser() {
     BlankService.getUser().then(function(user) {
