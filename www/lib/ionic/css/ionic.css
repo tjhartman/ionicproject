@@ -5694,10 +5694,10 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
  * --------------------------------------------------
  */
 .item {
-  border-color: #ddd;
-  background-color: #fff;
+  border-color: black;
+  background-color:  #11c1f3;
   border-radius: 25px;
-  color: #444;
+  color: white;
   position: relative;
   z-index: 2;
   display: block;

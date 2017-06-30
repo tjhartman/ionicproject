@@ -12,4 +12,19 @@ angular.module('app.services', [])
     this.getdata = function(){
         return $http.get(devUrl + '/api/getQuestionData')
     }
+
+    this.getUser = function() {
+    return $http({
+      method: 'GET',
+      url: devUrl + '/auth/me'
+    })
+    .then(function(res) {
+    console.log(res)
+      return res.data;
+    })
+    .catch(function(err) {
+      console.log(err);
+    })
+  }
+
 }]);
