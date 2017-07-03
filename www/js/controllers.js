@@ -52,20 +52,21 @@ $scope.questionId = 1;
 
     // }
 
-//     function getUser() {
-//     BlankService.getUser().then(function(user) {
-//         $scope.userResults = user;
-//         // $scope.userFavorites = user.favorites;
-//         console.log(user)
-//     })
-//   }
-
     $scope.getResults = function(Results) { 
-        console.log(Results)
         var totalResults = {
             "value": Results
         }
         BlankService.postResults(totalResults)
+    }
+
+    $scope.TJ = function(){
+        $scope.questionId++
+        console.log('asdfas')
+    }
+
+    $scope.runBoth = function(Results) {
+        $scope.TJ();
+        $scope.getResults(Results);
     }
 
 }])
