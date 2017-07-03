@@ -24,7 +24,11 @@ function ($scope, $stateParams, BlankService) {
 $scope.userResults;
 $scope.questionId = 1;
 
-        BlankService.getdata().then(function (response){
+
+       wrap = function(){
+           $scope.questionId += 1;
+           console.log($scope.questionId)
+           BlankService.getdata().then(function (response){
             var questions = response.data
             var group = []
             for (var i = 0; i < questions.length; i++){
@@ -33,11 +37,13 @@ $scope.questionId = 1;
                 }
                 
             }
-                console.log(group)
+        
                 $scope.questions = group
                 $scope.quest = group[0].question
-                console.log($scope.quest)
-        })
+               
+        })}
+
+        wrap()
         
     
 
@@ -59,14 +65,9 @@ $scope.questionId = 1;
         BlankService.postResults(totalResults)
     }
 
-    $scope.TJ = function(){
-        $scope.questionId++
-        console.log('asdfas')
-    }
-
     $scope.runBoth = function(Results) {
-        $scope.TJ();
         $scope.getResults(Results);
+        wrap();
     }
 
 }])
