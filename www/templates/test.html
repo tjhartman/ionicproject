@@ -1,11 +1,11 @@
 <ion-view title="Test" id="page4" > 
 <ion-content padding="true" class="has-header"> 
-    <button ng-click="backwards()">Back</button>
+    <button ng-click="backward($index)" background-color="white">Back</button>
     <button ng-click="forward($index)">Forward</button>
 <h1 id="test-heading4" style="color:#000000;text-align:center;">{{quest}}</h1> 
 <div ng-repeat='question in questions'> 
 <ion-list id="test-list1"> 
-<ion-item id="test-list-item4">{{question.options}}</ion-item> 
+<ion-item id="test-list-item4" ng-click='getResults(question.value)'>{{question.options}}</ion-item> 
 </ion-list> 
 </div> 
 </ion-content> 

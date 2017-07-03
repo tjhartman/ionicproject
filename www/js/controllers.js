@@ -47,21 +47,26 @@ $scope.questionId = 1;
 
     }
 
-    function getUser() {
-    BlankService.getUser().then(function(user) {
-        $scope.userResults = user;
-        // $scope.userFavorites = user.favorites;
-        console.log(user)
-    })
-  }
-    getUser()
+    // $scope.backward = function(index){
+    //     console.log($scope.quetionId)
 
-    // $scope.getReults = function(Results) {
-    //     var totalResults = {
-    //         "value": value,
-    //         "password": $scope.userResults.password
-    //     }
     // }
+
+//     function getUser() {
+//     BlankService.getUser().then(function(user) {
+//         $scope.userResults = user;
+//         // $scope.userFavorites = user.favorites;
+//         console.log(user)
+//     })
+//   }
+
+    $scope.getResults = function(Results) { 
+        console.log(Results)
+        var totalResults = {
+            "value": Results
+        }
+        BlankService.postResults(totalResults)
+    }
 
 }])
    

@@ -27,4 +27,9 @@ angular.module('app.services', [])
     })
   }
 
+  this.postResults = function(Results) {
+    console.log(Results)
+  return $http.post(devUrl + '/postResults', Results)
+  }
+
 }]);
